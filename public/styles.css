@@ -134,7 +134,7 @@ select:focus {
 
 .check-row {
   display: grid;
-  gap: 12px;
+  gap: 8px;
   margin-bottom: 24px;
 }
 
@@ -147,6 +147,13 @@ select:focus {
   width: 18px;
   min-height: 18px;
   margin: 0;
+}
+
+.field-help {
+  margin: 0 0 8px 30px;
+  color: #667085;
+  font-size: 0.78rem;
+  line-height: 1.5;
 }
 
 button {

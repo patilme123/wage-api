@@ -13,6 +13,12 @@ const submitButton = document.querySelector("#submit-button");
 const formError = document.querySelector("#form-error");
 const emptyState = document.querySelector("#empty-state");
 const resultPanel = document.querySelector("#result");
+const customarySupervisionField = document.querySelector(
+  "#customary-supervision-field",
+);
+const customarySupervisionHelp = document.querySelector(
+  "#customary-supervision-help",
+);
 
 document.querySelectorAll("[data-education]").forEach((select) => {
   educationOptions.forEach(([value, label]) => {
@@ -22,6 +28,16 @@ document.querySelectorAll("[data-education]").forEach((select) => {
 
 form.elements.usualEducation.value = "bachelors";
 form.elements.requiredEducation.value = "masters";
+
+form.elements.supervisesEmployees.addEventListener("change", () => {
+  const supervisesEmployees = form.elements.supervisesEmployees.checked;
+  customarySupervisionField.hidden = !supervisesEmployees;
+  customarySupervisionHelp.hidden = !supervisesEmployees;
+
+  if (!supervisesEmployees) {
+    form.elements.supervisionIsCustomary.checked = false;
+  }
+});
 
 form.elements.state.addEventListener("change", () => {
   const areaByState = {

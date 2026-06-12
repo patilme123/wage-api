@@ -2,8 +2,9 @@
   "name": "dol-wage-level-api",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "Educational API implementing the DOL prevailing wage level worksheet with demo wage data.",
-  "main": "dist/server.js",
+  "main": "dist/src/server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc -p tsconfig.json",

@@ -111,13 +111,21 @@
 
           <div class="check-row">
             <label class="check-label">
-              <input name="supervisesEmployees" type="checkbox" checked>
+              <input name="supervisesEmployees" type="checkbox">
               Supervises employees
             </label>
-            <label class="check-label">
+            <p class="field-help">
+              Select this only when the offered job supervises one or more
+              employees.
+            </p>
+            <label id="customary-supervision-field" class="check-label" hidden>
               <input name="supervisionIsCustomary" type="checkbox">
               Supervision is customary for this occupation
             </label>
+            <p id="customary-supervision-help" class="field-help" hidden>
+              Select this when supervision is already a normal duty of the
+              occupation. No additional supervision point will be added.
+            </p>
           </div>
 
           <button id="submit-button" type="submit">Calculate wage level</button>
